@@ -1,0 +1,19 @@
+name: Node Hello Workflow
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  setup-node-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Run the app
+        run: node index.js
