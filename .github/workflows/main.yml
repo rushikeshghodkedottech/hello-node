@@ -18,7 +18,7 @@ jobs:
           node-version: '18'
 
       - name: Run Hello Action
-        uses: ./  # or ./github/actions/hello if it's in a subfolder
+        uses: ./github/workflows/action.yml 
         with:
           who-to-greet: 'Rushikesh'          
 
